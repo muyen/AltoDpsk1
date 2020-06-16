@@ -1,0 +1,40 @@
+{
+  "name": "SZCluster",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sharedSecret",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ipAddress",
+      "otherEntityRelationshipName": "szCluster",
+      "relationshipName": "ipAddress"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "infrastructure",
+      "otherEntityRelationshipName": "sZCluster",
+      "relationshipName": "infrastructure",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200616195737",
+  "entityTableName": "sz_cluster",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "AltoDpsk1",
+  "applications": "*",
+  "microserviceName": "AltoDpsk1"
+}

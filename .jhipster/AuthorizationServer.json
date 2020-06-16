@@ -1,0 +1,34 @@
+{
+  "name": "AuthorizationServer",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "authConfig",
+      "otherEntityRelationshipName": "authorizationServer",
+      "relationshipName": "primaryServer",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "authConfig",
+      "otherEntityRelationshipName": "authorizationServer",
+      "relationshipName": "secondaryServer",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20200616195937",
+  "entityTableName": "authorization_server",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "AltoDpsk1",
+  "applications": "*",
+  "microserviceName": "AltoDpsk1"
+}
