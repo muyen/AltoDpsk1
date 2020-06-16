@@ -1,0 +1,41 @@
+entity Infrastructure {
+	name String
+}
+
+
+entity SZCluster {
+	name String,
+	sharedSecret String
+}
+
+entity IpAddress {
+	ipAdress String
+}
+
+entity AuthorizationServer {
+}
+
+entity AuthConfig {
+	name String,
+	ipAddress String,
+	port Integer,
+	sharedSecret String
+}
+
+relationship OneToOne {
+	AuthorizationServer{primaryServer} to AuthConfig,
+   	AuthorizationServer{secondaryServer} to AuthConfig,
+	Infrastructure{authorizationServer} to AuthorizationServer
+
+}
+
+relationship OneToMany {
+	SZCluster to IpAddress{szCluster},
+	/**
+	* A relationship
+	*/
+	Infrastructure to SZCluster{infrastructure}
+}
+
+dto * with mapstruct
+service * with serviceImpl
