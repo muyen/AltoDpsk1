@@ -1,0 +1,30 @@
+{
+  "name": "IpAddress",
+  "fields": [
+    {
+      "fieldName": "ipAdress",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "sZCluster",
+      "otherEntityRelationshipName": "ipAddress",
+      "relationshipName": "szCluster",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200616195837",
+  "entityTableName": "ip_address",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "AltoDpsk1",
+  "applications": "*",
+  "microserviceName": "AltoDpsk1"
+}

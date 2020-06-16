@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity AuthorizationServer.
+    -->
+    <changeSet id="20200616195937-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="primary_server_id"
+                                 baseTableName="authorization_server"
+                                 constraintName="fk_authorization_server_primary_server_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auth_config"/>
+
+        <addForeignKeyConstraint baseColumnNames="secondary_server_id"
+                                 baseTableName="authorization_server"
+                                 constraintName="fk_authorization_server_secondary_server_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auth_config"/>
+
+    </changeSet>
+</databaseChangeLog>
